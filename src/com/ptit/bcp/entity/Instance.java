@@ -5,24 +5,26 @@
  */
 package com.ptit.bcp.entity;
 
+import java.util.Arrays;
+
 /**
  *
  * @author tuyenlv
  */
 public class Instance {
-    public static String [] attributes = {};
-    public static String [] classLabel = {};
+    public static String [] attributes = {"Clump Thickness","Uniformity of Cell Size","Uniformity of Cell Shape","Marginal Adhesion","Single Epithelial Cell Size","Bare Nuclei","Bland Chromatin","Normal Nucleoli","Mitoses"};
+    public static String [] classLabel = {"2", "4"};
     private String id;
     private int[] attrVal;
-    private int type;
+    private int insClass;
     
     public Instance() {
     }
 
-    public Instance(String id, int[] attrVal, int type) {
+    public Instance(String id, int[] attrVal, int insClass) {
         this.id = id;
         this.attrVal = attrVal;
-        this.type = type;
+        this.insClass = insClass;
     }       
 
     public static String[] getAttributes() {
@@ -49,14 +51,28 @@ public class Instance {
         this.attrVal = attrVal;
     }
 
-    public int getType() {
-        return type;
+    public int getInsClass() {
+        return insClass;
     }
 
-    public void setType(int type) {
-        this.type = type;
-    }
+    public void setInsClass(int insClass) {
+        this.insClass = insClass;
+    }    
+    
+    public void setInsClass(String insClassStr) {
+        int index = -1;
+        for(int i = 0; i < classLabel.length; i++) {
+            if(classLabel[i].equals(insClassStr)) {
+                this.insClass = i;
+                break;
+            }
+        }
+    }    
 
+    @Override
+    public String toString() {
+        return "Instance{attrVal=" + Arrays.toString(attrVal) + ", insClass=" + insClass + '}';
+    }
     
     
 }

@@ -3,8 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/tuyenlv/data/programing/java/Socket/BreastCancerPrediction/src/com/ptit/bcp/main/Main.java</file>
-            <file>file:/home/tuyenlv/data/programing/java/Socket/BreastCancerPrediction/src/com/ptit/bcp/entity/TreeNode.java</file>
+            <file>file:/home/tuyenlv/data/learning/school/sem8/data-mining/final-project/BreastCancerPrediction/src/com/ptit/bcp/main/Main.java</file>
+            <file>file:/home/tuyenlv/data/learning/school/sem8/data-mining/final-project/BreastCancerPrediction/src/com/ptit/bcp/entity/Measure.java</file>
+            <file>file:/home/tuyenlv/data/learning/school/sem8/data-mining/final-project/BreastCancerPrediction/src/com/ptit/bcp/entity/ID3Node.java</file>
+            <file>file:/home/tuyenlv/data/learning/school/sem8/data-mining/final-project/BreastCancerPrediction/src/com/ptit/bcp/main/ID3Tree.java</file>
+            <file>file:/home/tuyenlv/data/learning/school/sem8/data-mining/final-project/BreastCancerPrediction/src/com/ptit/bcp/entity/Instance.java</file>
+            <file>file:/home/tuyenlv/data/learning/school/sem8/data-mining/final-project/BreastCancerPrediction/src/com/ptit/bcp/utils/ID3Utils.java</file>
         </group>
     </open-files>
 </project-private>

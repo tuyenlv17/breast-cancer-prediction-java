@@ -10,7 +10,7 @@ package com.ptit.bcp.entity;
  * @author tuyenlv
  */
 public class Measure {
-    private float accuracy, precision, f1, recall;
+    private double accuracy, precision, recall, f1;
     private int truePos, falsePos, trueNeg, falseNeg;
 
     public Measure() {
@@ -22,41 +22,41 @@ public class Measure {
         this.falsePos = falsePos;
         this.trueNeg = trueNeg;
         this.falseNeg = falseNeg;
-        accuracy = (float)(truePos + trueNeg) / (truePos + trueNeg + falsePos + falseNeg);
-        precision = (float)truePos / (truePos + falsePos);
-        recall = (float)truePos / (truePos + falseNeg);
-        f1 = precision * recall / (precision + recall);
+        accuracy = (double)(truePos + trueNeg) / (truePos + trueNeg + falsePos + falseNeg);
+        precision = (double)truePos / (truePos + falsePos);
+        recall = (double)truePos / (truePos + falseNeg);
+        f1 = 2 * precision * recall / (precision + recall);
     }
 
-    public float getAccuracy() {
+    public double getAccuracy() {
         return accuracy;
     }
 
-    public void setAccuracy(float accuracy) {
+    public void setAccuracy(double accuracy) {
         this.accuracy = accuracy;
     }
 
-    public float getPrecision() {
+    public double getPrecision() {
         return precision;
     }
 
-    public void setPrecision(float precision) {
+    public void setPrecision(double precision) {
         this.precision = precision;
     }
 
-    public float getF1() {
+    public double getF1() {
         return f1;
     }
 
-    public void setF1(float f1) {
+    public void setF1(double f1) {
         this.f1 = f1;
     }
 
-    public float getRecall() {
+    public double getRecall() {
         return recall;
     }
 
-    public void setRecall(float recall) {
+    public void setRecall(double recall) {
         this.recall = recall;
     }
 
@@ -94,8 +94,6 @@ public class Measure {
 
     @Override
     public String toString() {
-        return "Measure{" + "accuracy=" + accuracy + ", precision=" + precision + ", f1=" + f1 + ", recall=" + recall + ", truePos=" + truePos + ", falsePos=" + falsePos + ", trueNeg=" + trueNeg + ", falseNeg=" + falseNeg + '}';
+        return "Measure{" + "accuracy=" + accuracy + ", precision=" + precision + ", recall=" + recall + ", f1=" + f1 + ", truePos=" + truePos + ", falsePos=" + falsePos + ", trueNeg=" + trueNeg + ", falseNeg=" + falseNeg + '}';
     }
-        
-    
 }
